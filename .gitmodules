@@ -1,0 +1,12 @@
+[submodule "go"]
+	path = go
+	url = https://github.com/zinho02/go
+[submodule "pebble"]
+	path = pebble
+	url = https://github.com/zinho02/pebble
+[submodule "lego"]
+	path = lego
+	url = https://github.com/zinho02/lego
+[submodule "go-jose"]
+	path = go-jose
+	url = https://github.com/zinho02/go-jose
