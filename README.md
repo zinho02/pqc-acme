@@ -1,46 +1,46 @@
-# Protocolo ACME Pós-Quântico
+# Post-Quantum ACME Protocol
 
-## Trabalho de Conclusão de Curso
-**Curso:** Ciência da Computação  
-**Universidade:** Universidade Federal de Santa Catarina (UFSC)  
-**Autor:** Matheus de Oliveira Saldanha
+## Completion of course work
+**Course:** Computer Science
+**University:** Federal University of Santa Catarina (UFSC)
+**Author:** Matheus de Oliveira Saldanha
 
 
-### Instruções para configurar o ambiente e executar o cliente e servidor ACME
+### Instructions for setting up the environment and running the ACME client and server
 
-As instruções são para um ambiente Linux.
+The instructions are for a Linux environment.
 
-Primeiramente, certifique-se que o Go está instalado, caso não esteja, basta acessar a [página do Go](https://go.dev/) e seguir as instruções para o download.
+First, make sure that Go is installed, if not, just access the [Go page](https://go.dev/) and follow the download instructions.
 
-Após isso, crie no diretório ```$HOME``` a seguinte estrutura de pastas:
+After that, create the following folder structure in the ```$HOME``` directory:
 
 ```
-mkdir -p go/src/github.com/{usuario}
+mkdir -p go/src/github.com/{username}
 mkdir -p go/bin
 mkdir -p go/pkg
 ```
 
-Onde {usuario} é um nome qualquer.
+Where {username} is any name.
 
-Após isso:
+After this:
 
 ```
-cd go/src/github.com/{usuario}
+cd go/src/github.com/{username}
 git clone git@github.com:zinho02/pqc-acme.git
 ```
 
-Siga as instruções para instalar as *bindings* da **LibOQS** para **Go** e instale o repositório em ```$HOME/go/src/github.com/```, elas podem ser encontradas [aqui](https://github.com/open-quantum-safe/liboqs-go).
+Follow the instructions to install the *bindings* from **LibOQS** to **Go** and install the repository at ```$HOME/go/src/github.com/```, they can be found [here ](https://github.com/open-quantum-safe/liboqs-go).
 
-Com isso feito, altere o final do arquivo ```$HOME/.bashrc``` com as seguintes alterações:
+With that done, change the end of the ```$HOME/.bashrc``` file with the following changes:
 
 ```shell
-export GOROOT=$HOME/go/src/github.com/{usuario}/go
-export GOPATH=$HOME/go:$HOME/go/src/github.com/{usuario}/go:$HOME/go/src/github.com/{usuario}
+export GOROOT=$HOME/go/src/github.com/{user}/go
+export GOPATH=$HOME/go:$HOME/go/src/github.com/{username}/go:$HOME/go/src/github.com/{username}
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$HOME/go/src/github.com/liboqs-go/.config
 ```
 
-Com isso feito, basta rodar as instruções do cliente e do servidor ACME disponíveis:  
--  [Cliente ACME](https://github.com/go-acme/lego)
--  [Servidor ACME](https://github.com/letsencrypt/pebble)
+With that done, just run the available ACME client and server instructions:
+- [ACME Client](https://github.com/go-acme/lego)
+- [ACME Server](https://github.com/letsencrypt/pebble)
